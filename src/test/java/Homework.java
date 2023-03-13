@@ -8,6 +8,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class Homework{
 
     WebDriver  wd;
@@ -100,4 +102,24 @@ public class Homework{
         WebElement xel10= wd.findElement(By.xpath("//a[contains(@style, 'background-color: black; color: white;')]"));
 
     }
-}
+
+    @Test
+    public void classwork1303 (){
+        WebElement el = wd.findElement(By.xpath("//h1/parent::*"));
+
+        //ancestor
+        WebElement el3 = wd.findElement(By.xpath("//h1/ancestor::*"));
+        WebElement el4 = wd.findElement(By.xpath("//h1/ancestor::div"));
+        WebElement el5 = wd.findElement(By.xpath("//h1/ancestor::div[2]"));
+
+        //ancestor-or-self
+       List<WebElement> list = wd.findElements(By.xpath("//h1/ancestor-or-self::*"));
+
+       //following-sibling
+        List<WebElement> list1 = wd.findElements(By.xpath("//h1/following-sibling::a"));
+
+        //preceding-sibling
+        
+    }
+
+        }
