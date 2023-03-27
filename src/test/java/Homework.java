@@ -119,7 +119,7 @@ public class Homework{
         List<WebElement> list1 = wd.findElements(By.xpath("//h1/following-sibling::a"));
 
         //preceding-sibling
-        
+
     }
 
         }
